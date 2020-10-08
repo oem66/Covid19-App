@@ -9,6 +9,33 @@ import SwiftUI
 
 struct SymptomsView: View {
     var body: some View {
+        
+        let sympthomText = """
+            Most common symptoms:
+            - fever
+            - dry cough
+            - tiredness
+            
+            Less common symptoms:
+            - aches and pains
+            - sore throat
+            - diarrhoea
+            - conjunctivitis
+            - headache
+            - loss of taste or smell
+            - a rash on skin, or discolouration of fingers or toes
+            
+            Serious symptoms:
+            - difficulty breathing or shortness of breath
+            - chest pain or pressure
+            - loss of speech or movement
+
+            Seek immediate medical attention if you have serious symptoms.
+            Always call before visiting your doctor or health facility.
+            People with mild symptoms who are otherwise healthy should manage their symptoms at home.
+            On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.
+        """
+        
         VStack {
             ZStack {
                 Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
@@ -16,81 +43,27 @@ struct SymptomsView: View {
                 Image("pneumonia")
                     .resizable()
                     .frame(width: 150, height: 150, alignment: .center)
-                    .padding(.bottom, 30)
+                    .padding([.top, .bottom], 20)
             }
             .frame(height: 180, alignment: .center)
             
-            
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("COVID-19 Symptoms")
-                        .font(.system(size: 25))
-                        .fontWeight(.semibold)
-                    
-                    Text("Most common symptoms:")
-                        .font(.custom("Helvetica Neue", size: 20))
-                    
-                    Text("- fever")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- dry cough")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- tiredness")
-                        .font(.custom("Helvetica Neue", size: 14))
+                    Text(sympthomText)
+                        .lineLimit(nil)
+                        .foregroundColor(Color(red: 53/255, green: 54/255, blue: 56/255))
+                        .font(.custom("Avenir-Medium", size: 15))
                 }
-                .padding(.bottom, 15)
-                
-                VStack(alignment: .leading) {
-                    Text("Less common symptoms:")
-                        .font(.custom("Helvetica Neue", size: 20))
-                    
-                    Text("- aches and pains")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- sore throat")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- diarrhoea")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- conjunctivitis")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- headache")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- loss of taste or smell")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- a rash on skin, or discolouration of fingers or toes")
-                        .font(.custom("Helvetica Neue", size: 14))
-                }
-                .padding(.bottom, 15)
-                
-                VStack(alignment: .leading) {
-                    Text("Serious symptoms:")
-                        .font(.custom("Helvetica Neue", size: 20))
-                    
-                    Text("- difficulty breathing or shortness of breath")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- chest pain or pressure")
-                        .font(.custom("Helvetica Neue", size: 14))
-                    Text("- loss of speech or movement")
-                        .font(.custom("Helvetica Neue", size: 14))
-                }
-                .padding(.bottom, 15)
-                
-                VStack(alignment: .leading) {
-                    Text("Seek immediate medical attention if you have serious symptoms. Always call before visiting your doctor or health facility.")
-                        .padding(.bottom, 5)
-                        .font(.custom("Helvetica Neue", size: 14))
-                    
-                    Text("People with mild symptoms who are otherwise healthy should manage their symptoms at home.")
-                        .padding(.bottom, 5)
-                        .font(.custom("Helvetica Neue", size: 14))
-                    
-                    Text("On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.")
-                        .padding(.bottom, 5)
-                        .font(.custom("Helvetica Neue", size: 14))
-                }
+                .padding(.top, 15)
             }
         }
-        .padding([.leading, .trailing, .bottom], 15)
+        .padding([.top, .leading, .trailing, .bottom], 15)
+        .padding(.top, 5)
+        .navigationTitle(Text("Symptoms"))
     }
+    
 }
+
 
 struct SymptomsView_Previews: PreviewProvider {
     static var previews: some View {

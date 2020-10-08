@@ -65,12 +65,12 @@ struct CountryView: View {
                 
                 Text(country.name)
                     .bold()
-                    .font(.custom("Helvetica Neue", size: 15))
+                    .font(.custom("Avenir-Medium", size: 15))
                     .foregroundColor(Color.black)
                 
                 Text(country.alpha2Code)
                     .bold()
-                    .font(.custom("Helvetica Neue", size: 15))
+                    .font(.custom("Avenir-Medium", size: 15))
                     .foregroundColor(Color.orange)
                 
                 Image(country.flag)

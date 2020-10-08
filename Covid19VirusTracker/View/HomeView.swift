@@ -16,7 +16,7 @@ struct HomeView: View {
                 
                 Text("Prevent COVID-19")
                     .bold()
-                    .font(.custom("Helvetica Neue", size: 30))
+                    .font(.custom("Avenir-Medium", size: 30))
                     .foregroundColor(.white)
                     .padding(.leading, 15)
                 
@@ -34,13 +34,13 @@ struct HomeView: View {
                                         .padding(.bottom, 10)
                                     
                                     Text("Symptoms")
-                                        .font(.custom("Helvetica Neue", size: 20))
+                                        .font(.custom("Avenir-Medium", size: 20))
                                         .fontWeight(.semibold)
                                         .foregroundColor(.yellow)
                                         .padding(.bottom, 5)
                                     
                                     Text("Signs identify the risk of infection")
-                                        .font(.custom("Helvetica Neue", size: 15))
+                                        .font(.custom("Avenir-Medium", size: 15))
                                         .fontWeight(.medium)
                                         .foregroundColor(.white)
                                         .padding(.bottom, 10)
@@ -65,13 +65,13 @@ struct HomeView: View {
                                         .padding(.bottom, 10)
                                     
                                     Text("Prevention")
-                                        .font(.custom("Helvetica Neue", size: 20))
+                                        .font(.custom("Avenir-Medium", size: 20))
                                         .fontWeight(.semibold)
                                         .foregroundColor(.yellow)
                                         .padding(.bottom, 5)
                                     
                                     Text("Help you avoid the risk of infection")
-                                        .font(.custom("Helvetica Neue", size: 15))
+                                        .font(.custom("Avenir-Medium", size: 15))
                                         .fontWeight(.medium)
                                         .foregroundColor(.white)
                                         .padding(.bottom, 10)
@@ -99,13 +99,13 @@ struct HomeView: View {
                                         .padding(.bottom, 10)
                                     
                                     Text("Reports")
-                                        .font(.custom("Helvetica Neue", size: 20))
+                                        .font(.custom("Avenir-Medium", size: 20))
                                         .fontWeight(.semibold)
                                         .foregroundColor(.yellow)
                                         .padding(.bottom, 5)
                                     
                                     Text("Data related to the disease")
-                                        .font(.custom("Helvetica Neue", size: 15))
+                                        .font(.custom("Avenir-Medium", size: 15))
                                         .fontWeight(.medium)
                                         .foregroundColor(.white)
                                         .padding(.bottom, 10)
@@ -128,13 +128,13 @@ struct HomeView: View {
                                         .padding(.bottom, 10)
                                     
                                     Text("Countries")
-                                        .font(.custom("Helvetica Neue", size: 20))
+                                        .font(.custom("Avenir-Medium", size: 20))
                                         .fontWeight(.semibold)
                                         .foregroundColor(.yellow)
                                         .padding(.bottom, 5)
                                     
                                     Text("Infected countries by COVID-19")
-                                        .font(.custom("Helvetica Neue", size: 15))
+                                        .font(.custom("Avenir-Medium", size: 15))
                                         .fontWeight(.medium)
                                         .foregroundColor(.white)
                                         .padding(.bottom, 10)
@@ -156,12 +156,13 @@ struct HomeView: View {
             VStack(alignment: .leading) {
                 Text("Requirements")
                     .fontWeight(.semibold)
-                    .font(.custom("Helvetica Neue", size: 22))
+                    .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 22))
                     .padding(.bottom, 2)
                 
                 Text("Help you prevent virus better")
                     .foregroundColor(Color.gray)
-                    .font(.custom("Helvetica Neue", size: 15))
+                    .font(.custom("Avenir-Medium", size: 15))
                     .padding(.bottom, 10)
             }
             
@@ -178,7 +179,8 @@ struct HomeView: View {
                     .clipShape(Circle())
                     
                     Text("Mask")
-                        .font(.custom("Helvetica Neue", size: 15))
+                        .font(.custom("Avenir-Medium", size: 15))
+                        .foregroundColor(.black)
                         .fontWeight(.semibold)
                 }
                 .padding(10)
@@ -195,7 +197,8 @@ struct HomeView: View {
                     .clipShape(Circle())
                     
                     Text("Gloves")
-                        .font(.custom("Helvetica Neue", size: 15))
+                        .font(.custom("Avenir-Medium", size: 15))
+                        .foregroundColor(.black)
                         .fontWeight(.semibold)
                 }
                 .padding(10)
@@ -212,7 +215,8 @@ struct HomeView: View {
                     .clipShape(Circle())
                     
                     Text("Alcohol")
-                        .font(.custom("Helvetica Neue", size: 15))
+                        .font(.custom("Avenir-Medium", size: 15))
+                        .foregroundColor(.black)
                         .fontWeight(.semibold)
                 }
                 .padding(10)
@@ -229,7 +233,8 @@ struct HomeView: View {
                     .clipShape(Circle())
                     
                     Text("Soap")
-                        .font(.custom("Helvetica Neue", size: 15))
+                        .font(.custom("Avenir-Medium", size: 15))
+                        .foregroundColor(.black)
                         .fontWeight(.semibold)
                     
                 }

@@ -23,13 +23,14 @@ struct WelcomeView: View {
                     
                     Text("COVID-19")
                         .font(.custom("San Francisco", size: 35))
-                        .fontWeight(.heavy)
+                        .bold()
                         .foregroundColor(.white)
                         .padding(.top, 50)
                     
                     
                     Text("Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.")
-                        .font(.custom("San Francisco", size: 13))
+                        .bold()
+                        .font(.custom("Avenir-Medium", size: 13))
                         .fontWeight(.regular)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
@@ -39,7 +40,7 @@ struct WelcomeView: View {
                         HStack {
                             Text("Get Started")
                                 .bold()
-                                .font(.custom("San Francisco", size: 17))
+                                .font(.custom("Avenir-Medium", size: 17))
                                 .foregroundColor(.black)
                                 .padding()
                             
@@ -47,14 +48,17 @@ struct WelcomeView: View {
                                 .foregroundColor(Color(red: 44/255, green: 42/255, blue: 232/255))
                                 .padding()
                         }
+                        .padding([.leading, .trailing], 20)
                     }
                     .background(Color.white)
+                    .cornerRadius(20.0)
                     .padding(.bottom, 60)
                     .padding(.top, 60)
                 }
                 .padding(.all, 30)
             }
         }
+        .foregroundColor(.white)
     }
 }
 
