@@ -164,14 +164,18 @@ struct PreventionView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     Text("How to prevent?")
+                        .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 22))
+                        .minimumScaleFactor(0.5)
                     
                     Text(preventionText)
+                        .bold()
                         .lineLimit(nil)
-                        .foregroundColor(Color(red: 53/255, green: 54/255, blue: 56/255))
-                        .font(.custom("Avenir-Medium", size: 18))
+                        .foregroundColor(.black)
+                        .font(.custom("Avenir-Medium", size: 15))
+                        .minimumScaleFactor(0.5)
                 }
             }
         }

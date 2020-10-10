@@ -50,8 +50,9 @@ struct SymptomsView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     Text(sympthomText)
+                        .bold()
                         .lineLimit(nil)
-                        .foregroundColor(Color(red: 53/255, green: 54/255, blue: 56/255))
+                        .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 15))
                         .minimumScaleFactor(0.5)
                 }

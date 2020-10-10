@@ -30,7 +30,7 @@ struct WelcomeView: View {
                     
                     Text("Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.")
                         .bold()
-                        .font(.custom("Avenir-Medium", size: 13))
+                        .font(.custom("Avenir-Medium", size: 16))
                         .fontWeight(.regular)
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
@@ -53,7 +53,7 @@ struct WelcomeView: View {
                         .padding([.leading, .trailing], 20)
                     }
                     .background(Color.white)
-                    .cornerRadius(20.0)
+                    .cornerRadius(8.0)
                     .padding(.bottom, 60)
                     .padding(.top, 60)
                 }
