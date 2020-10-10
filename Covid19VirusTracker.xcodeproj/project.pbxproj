@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173D56F02531C7D4006FAD3A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 173D56EF2531C7D4006FAD3A /* SwiftUICharts */; };
 		174E31DC2527B3AF00375DC3 /* CovidInfection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E31DB2527B3AF00375DC3 /* CovidInfection.swift */; };
 		174E31DF2527BD7500375DC3 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E31DE2527BD7500375DC3 /* Country.swift */; };
 		174E31ED2527C8DB00375DC3 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E31EC2527C8DB00375DC3 /* CountryView.swift */; };
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173D56F02531C7D4006FAD3A /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +158,9 @@
 			dependencies = (
 			);
 			name = Covid19VirusTracker;
+			packageProductDependencies = (
+				173D56EF2531C7D4006FAD3A /* SwiftUICharts */,
+			);
 			productName = Covid19VirusTracker;
 			productReference = 17D93EDA2527116000E3BBC2 /* Covid19VirusTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +188,9 @@
 				Base,
 			);
 			mainGroup = 17D93ED12527116000E3BBC2;
+			packageReferences = (
+				173D56EE2531C7D4006FAD3A /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 17D93EDB2527116000E3BBC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		173D56EE2531C7D4006FAD3A /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		173D56EF2531C7D4006FAD3A /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 173D56EE2531C7D4006FAD3A /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		17D93EE82527116200E3BBC2 /* Covid19VirusTracker.xcdatamodeld */ = {
