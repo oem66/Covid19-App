@@ -26,7 +26,7 @@ struct WelcomeView: View {
                         .bold()
                         .foregroundColor(.white)
                         .padding(.top, 50)
-                    
+                        .minimumScaleFactor(0.5)
                     
                     Text("Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.")
                         .bold()
@@ -35,6 +35,7 @@ struct WelcomeView: View {
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .padding(.top, 30)
+                        .minimumScaleFactor(0.5)
                     
                     NavigationLink(destination: HomeView()) {
                         HStack {
@@ -43,6 +44,7 @@ struct WelcomeView: View {
                                 .font(.custom("Avenir-Medium", size: 17))
                                 .foregroundColor(.black)
                                 .padding()
+                                .minimumScaleFactor(0.5)
                             
                             Image(systemName: "chevron.right.square.fill")
                                 .foregroundColor(Color(red: 44/255, green: 42/255, blue: 232/255))

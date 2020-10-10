@@ -9,82 +9,174 @@ import SwiftUI
 
 struct PreventionView: View {
     var body: some View {
-        VStack {
+        
+        var preventionText = """
+        People who felt unwell should stay home and see a doctor. This will help person get the right advice. When convalescing at home, people need to eat, sleep and use their own clothes with family members. In particular, if you feel short of breath, call a physician and seek treatment immediately.
+        """
+        
+        ZStack {
+            Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
             
-            ZStack {
-                Color(red: 44/255, green: 42/255, blue: 232/255)
-                
-                VStack(alignment: .leading) {
-                    ZStack {
-                        Color(red: 37/255, green: 96/255, blue: 245/255)
-                        HStack {
-                            Image("avoid")
-                                .resizable()
-                                .frame(width: 45, height: 45)
-                                .padding(.trailing, 10)
-                            
-                            Text("Avoid contact with sick people")
-                                .foregroundColor(.white)
-                                .font(.custom("Avenir-Medium", size: 15))
+            VStack(alignment: .leading) {
+                VStack {
+                    HStack {
+                        
+                        NavigationLink(destination: SymptomsView()) {
+                            ZStack {
+                                Color(red: 37/255, green: 96/255, blue: 245/255)
+                                VStack(alignment: .leading) {
+                                    
+                                    Image("avoid")
+                                        .resizable()
+                                        .frame(width: 40, height: 40, alignment: .leading)
+                                        .padding(.bottom, 10)
+                                    
+                                    Text("Physical distance")
+                                        .font(.custom("Avenir-Medium", size: 20))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.yellow)
+                                        .padding(.bottom, 5)
+                                        .minimumScaleFactor(0.5)
+                                    
+                                    Text("Avoid contact with sick people")
+                                        .font(.custom("Avenir-Medium", size: 15))
+                                        .fontWeight(.medium)
+                                        .foregroundColor(.white)
+                                        .padding(.bottom, 10)
+                                        .minimumScaleFactor(0.5)
+                                    
+                                }
+                                .padding(.all, 10)
+                            }
+                            .clipped()
+                            .cornerRadius(15.0)
                         }
+                        
+                        Spacer()
+                        
+                        NavigationLink(destination: PreventionView()) {
+                            ZStack {
+                                Color(red: 37/255, green: 96/255, blue: 245/255)
+                                VStack(alignment: .leading) {
+                                    
+                                    Image("desinfectant")
+                                        .resizable()
+                                        .frame(width: 40, height: 40, alignment: .leading)
+                                        .padding(.bottom, 10)
+                                    
+                                    Text("Hygiene")
+                                        .font(.custom("Avenir-Medium", size: 20))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.yellow)
+                                        .padding(.bottom, 5)
+                                        .minimumScaleFactor(0.5)
+                                    
+                                    Text("Wash your hands with soap")
+                                        .font(.custom("Avenir-Medium", size: 15))
+                                        .fontWeight(.medium)
+                                        .foregroundColor(.white)
+                                        .padding(.bottom, 10)
+                                        .minimumScaleFactor(0.5)
+                                    
+                                }
+                                .padding(.all, 10)
+                            }
+                            .clipped()
+                            .cornerRadius(15.0)
+                        }
+                        
+                        
                     }
-                    .padding([.leading, .trailing, .bottom, .top], 15)
                     
-                    ZStack {
-                        HStack {
-                            Image("desinfectant")
-                                .resizable()
-                                .frame(width: 45, height: 45)
-                                .padding(.trailing, 10)
-                            
-                            Text("Wash your hands with soap")
-                                .foregroundColor(.white)
-                                .font(.custom("Avenir-Medium", size: 15))
+                    HStack {
+                        
+                        NavigationLink(destination: ReportsView()) {
+                            ZStack {
+                                Color(red: 37/255, green: 96/255, blue: 245/255)
+                                VStack(alignment: .leading) {
+                                    
+                                    Image("face-mask")
+                                        .resizable()
+                                        .frame(width: 40, height: 40, alignment: .leading)
+                                        .padding(.bottom, 10)
+                                    
+                                    Text("Use mask")
+                                        .font(.custom("Avenir-Medium", size: 20))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.yellow)
+                                        .padding(.bottom, 5)
+                                        .minimumScaleFactor(0.5)
+                                    
+                                    Text("Use medical face mask")
+                                        .font(.custom("Avenir-Medium", size: 15))
+                                        .fontWeight(.medium)
+                                        .foregroundColor(.white)
+                                        .padding(.bottom, 10)
+                                        .minimumScaleFactor(0.5)
+                                    
+                                }
+                                .padding(.all, 10)
+                            }
+                            .clipped()
+                            .cornerRadius(15.0)
                         }
-                    }
-                    .padding([.leading, .trailing, .bottom], 15)
-                    
-                    ZStack {
-                        HStack {
-                            Image("face-mask")
-                                .resizable()
-                                .frame(width: 45, height: 45)
-                                .padding(.trailing, 10)
-                            
-                            Text("Use medical face mask")
-                                .foregroundColor(.white)
-                                .font(.custom("Avenir-Medium", size: 15))
+                        
+                        NavigationLink(destination: CountryCovidView()){
+                            ZStack {
+                                Color(red: 37/255, green: 96/255, blue: 245/255)
+                                VStack(alignment: .leading) {
+                                    
+                                    Image("hand-sanitizer-2")
+                                        .resizable()
+                                        .frame(width: 40, height: 40, alignment: .leading)
+                                        .padding(.bottom, 10)
+                                    
+                                    Text("Clean surface")
+                                        .font(.custom("Avenir-Medium", size: 20))
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.yellow)
+                                        .padding(.bottom, 5)
+                                        .minimumScaleFactor(0.5)
+                                    
+                                    Text("Clean surface with sanitiser")
+                                        .font(.custom("Avenir-Medium", size: 15))
+                                        .fontWeight(.medium)
+                                        .foregroundColor(.white)
+                                        .padding(.bottom, 10)
+                                        .minimumScaleFactor(0.5)
+                                    
+                                }
+                                .padding(.all, 10)
+                            }
+                            .clipped()
+                            .cornerRadius(15.0)
                         }
+                        
                     }
-                    .padding([.leading, .trailing, .bottom], 15)
-                    
-                    ZStack {
-                        HStack {
-                            Image("hand-sanitizer-2")
-                                .resizable()
-                                .frame(width: 45, height: 45)
-                                .padding(.trailing, 10)
-                            
-                            Text("Clean surface with sanitiser")
-                                .foregroundColor(.white)
-                                .font(.custom("Avenir-Medium", size: 15))
-                        }
-                    }
-                    .padding([.leading, .trailing, .bottom], 15)
                 }
-                .padding(.bottom, 15)
+                .padding([.leading, .trailing, .bottom], 15)
             }
-            .ignoresSafeArea(.all)
-            .padding(.bottom, 10)
-            .frame(height: 180)
+            .navigationTitle(Text("Prevention"))
             
-            VStack {
-                Text("People who felt unwell should stay home and see a doctor. This will help person get the right advice. When convalescing at home, people need to eat, sleep and use their own clothes with family members. In particular, if you feel short of breath, call a physician and seek treatment immediately.")
-                    .foregroundColor(Color(red: 53/255, green: 54/255, blue: 56/255))
-                    .font(.custom("Avenir-Medium", size: 15))
-            }
-            .padding(.all, 10)
         }
+        
+        VStack {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Text("How to prevent?")
+                        .lineLimit(nil)
+                        .foregroundColor(.black)
+                        .font(.custom("Avenir-Medium", size: 22))
+                    
+                    Text(preventionText)
+                        .lineLimit(nil)
+                        .foregroundColor(Color(red: 53/255, green: 54/255, blue: 56/255))
+                        .font(.custom("Avenir-Medium", size: 18))
+                }
+            }
+        }
+        .padding([.top, .leading, .trailing, .bottom], 15)
+        .padding(.top, 5)
     }
 }
 

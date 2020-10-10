@@ -19,6 +19,7 @@ struct HomeView: View {
                     .font(.custom("Avenir-Medium", size: 30))
                     .foregroundColor(.white)
                     .padding(.leading, 15)
+                    .minimumScaleFactor(0.5)
                 
                 VStack {
                     HStack {
@@ -38,12 +39,14 @@ struct HomeView: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor(.yellow)
                                         .padding(.bottom, 5)
+                                        .minimumScaleFactor(0.5)
                                     
                                     Text("Signs identify the risk of infection")
                                         .font(.custom("Avenir-Medium", size: 15))
                                         .fontWeight(.medium)
                                         .foregroundColor(.white)
                                         .padding(.bottom, 10)
+                                        .minimumScaleFactor(0.5)
                                     
                                 }
                                 .padding(.all, 10)
@@ -69,12 +72,14 @@ struct HomeView: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor(.yellow)
                                         .padding(.bottom, 5)
+                                        .minimumScaleFactor(0.5)
                                     
                                     Text("Help you avoid the risk of infection")
                                         .font(.custom("Avenir-Medium", size: 15))
                                         .fontWeight(.medium)
                                         .foregroundColor(.white)
                                         .padding(.bottom, 10)
+                                        .minimumScaleFactor(0.5)
                                     
                                 }
                                 .padding(.all, 10)
@@ -103,12 +108,14 @@ struct HomeView: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor(.yellow)
                                         .padding(.bottom, 5)
+                                        .minimumScaleFactor(0.5)
                                     
                                     Text("Data related to the disease")
                                         .font(.custom("Avenir-Medium", size: 15))
                                         .fontWeight(.medium)
                                         .foregroundColor(.white)
                                         .padding(.bottom, 10)
+                                        .minimumScaleFactor(0.5)
                                     
                                 }
                                 .padding(.all, 10)
@@ -132,12 +139,14 @@ struct HomeView: View {
                                         .fontWeight(.semibold)
                                         .foregroundColor(.yellow)
                                         .padding(.bottom, 5)
+                                        .minimumScaleFactor(0.5)
                                     
                                     Text("Infected countries by COVID-19")
                                         .font(.custom("Avenir-Medium", size: 15))
                                         .fontWeight(.medium)
                                         .foregroundColor(.white)
                                         .padding(.bottom, 10)
+                                        .minimumScaleFactor(0.5)
                                     
                                 }
                                 .padding(.all, 10)
@@ -159,11 +168,13 @@ struct HomeView: View {
                     .foregroundColor(.black)
                     .font(.custom("Avenir-Medium", size: 22))
                     .padding(.bottom, 2)
+                    .minimumScaleFactor(0.5)
                 
                 Text("Help you prevent virus better")
                     .foregroundColor(Color.gray)
                     .font(.custom("Avenir-Medium", size: 15))
                     .padding(.bottom, 10)
+                    .minimumScaleFactor(0.5)
             }
             
             HStack {
@@ -182,6 +193,7 @@ struct HomeView: View {
                         .font(.custom("Avenir-Medium", size: 15))
                         .foregroundColor(.black)
                         .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
                 }
                 .padding(10)
                 
@@ -200,6 +212,7 @@ struct HomeView: View {
                         .font(.custom("Avenir-Medium", size: 15))
                         .foregroundColor(.black)
                         .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
                 }
                 .padding(10)
                 
@@ -218,6 +231,7 @@ struct HomeView: View {
                         .font(.custom("Avenir-Medium", size: 15))
                         .foregroundColor(.black)
                         .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
                 }
                 .padding(10)
                 
@@ -236,6 +250,7 @@ struct HomeView: View {
                         .font(.custom("Avenir-Medium", size: 15))
                         .foregroundColor(.black)
                         .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
                     
                 }
                 .padding(.bottom, 10)

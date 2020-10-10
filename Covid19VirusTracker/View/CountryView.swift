@@ -67,11 +67,13 @@ struct CountryView: View {
                     .bold()
                     .font(.custom("Avenir-Medium", size: 15))
                     .foregroundColor(Color.black)
+                    .minimumScaleFactor(0.5)
                 
                 Text(country.alpha2Code)
                     .bold()
                     .font(.custom("Avenir-Medium", size: 15))
                     .foregroundColor(Color.orange)
+                    .minimumScaleFactor(0.5)
                 
                 Image(country.flag)
             }

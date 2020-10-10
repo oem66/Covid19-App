@@ -21,25 +21,31 @@ struct CountryCovidView: View {
                 VStack {
                     Text("Confirmed")
                         .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
                     Text("\(covidStats.Global.TotalConfirmed)")
                         .bold()
                         .foregroundColor(.orange)
+                        .minimumScaleFactor(0.5)
                 }
                 
                 VStack {
                     Text("Death")
                         .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
                     Text("\(covidStats.Global.TotalDeaths)")
                         .bold()
                         .foregroundColor(.red)
+                        .minimumScaleFactor(0.5)
                 }
                 
                 VStack {
                     Text("Recovered")
                         .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
                     Text("\(covidStats.Global.TotalRecovered)")
                         .bold()
                         .foregroundColor(.green)
+                        .minimumScaleFactor(0.5)
                 }
             }
             
@@ -55,14 +61,17 @@ struct CountryCovidView: View {
                         Text("\(countryStat.TotalConfirmed)")
                             .bold()
                             .foregroundColor(.orange)
+                            .minimumScaleFactor(0.5)
                         
                         Text("\(countryStat.TotalDeaths)")
                             .bold()
                             .foregroundColor(.red)
+                            .minimumScaleFactor(0.5)
                         
                         Text("\(countryStat.TotalRecovered)")
                             .bold()
                             .foregroundColor(.green)
+                            .minimumScaleFactor(0.5)
                     }
                     .padding(.leading, 10)
                 }

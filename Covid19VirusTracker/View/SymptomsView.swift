@@ -53,6 +53,7 @@ struct SymptomsView: View {
                         .lineLimit(nil)
                         .foregroundColor(Color(red: 53/255, green: 54/255, blue: 56/255))
                         .font(.custom("Avenir-Medium", size: 15))
+                        .minimumScaleFactor(0.5)
                 }
                 .padding(.top, 15)
             }
