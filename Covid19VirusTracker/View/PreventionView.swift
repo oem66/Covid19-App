@@ -21,7 +21,7 @@ struct PreventionView: View {
                 VStack {
                     HStack {
                         
-                        NavigationLink(destination: SymptomsView()) {
+//                        NavigationLink(destination: SymptomsView()) {
                             ZStack {
                                 Color(red: 37/255, green: 96/255, blue: 245/255)
                                 VStack(alignment: .leading) {
@@ -50,11 +50,11 @@ struct PreventionView: View {
                             }
                             .clipped()
                             .cornerRadius(15.0)
-                        }
+//                        }
                         
                         Spacer()
                         
-                        NavigationLink(destination: PreventionView()) {
+//                        NavigationLink(destination: PreventionView()) {
                             ZStack {
                                 Color(red: 37/255, green: 96/255, blue: 245/255)
                                 VStack(alignment: .leading) {
@@ -83,14 +83,14 @@ struct PreventionView: View {
                             }
                             .clipped()
                             .cornerRadius(15.0)
-                        }
+//                        }
                         
                         
                     }
                     
                     HStack {
                         
-                        NavigationLink(destination: ReportsView()) {
+//                        NavigationLink(destination: ReportsView()) {
                             ZStack {
                                 Color(red: 37/255, green: 96/255, blue: 245/255)
                                 VStack(alignment: .leading) {
@@ -119,9 +119,9 @@ struct PreventionView: View {
                             }
                             .clipped()
                             .cornerRadius(15.0)
-                        }
+//                        }
                         
-                        NavigationLink(destination: CountryCovidView()){
+//                        NavigationLink(destination: CountryCovidView()){
                             ZStack {
                                 Color(red: 37/255, green: 96/255, blue: 245/255)
                                 VStack(alignment: .leading) {
@@ -150,7 +150,7 @@ struct PreventionView: View {
                             }
                             .clipped()
                             .cornerRadius(15.0)
-                        }
+//                        }
                         
                     }
                 }
