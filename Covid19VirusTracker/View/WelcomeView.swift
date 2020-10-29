@@ -61,6 +61,7 @@ struct WelcomeView: View {
             }
         }
         .foregroundColor(.white)
+        .navigationBarColor(backgroundColor: Color.customBlue, tintColor: .white)
     }
 }
 

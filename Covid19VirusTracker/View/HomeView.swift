@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SafariServices
 
 struct HomeView: View {
     var body: some View {
@@ -13,14 +14,6 @@ struct HomeView: View {
             Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .leading) {
-                
-                Text("Prevent COVID-19")
-                    .bold()
-                    .font(.custom("Avenir-Medium", size: 30))
-                    .foregroundColor(.white)
-                    .padding(.leading, 15)
-                    .minimumScaleFactor(0.5)
-                
                 VStack {
                     HStack {
                         
@@ -178,84 +171,95 @@ struct HomeView: View {
             }
             
             HStack {
-                VStack {
-                    ZStack {
-                        Color(red: 250/255, green: 222/255, blue: 226/255)
-                        Image("mask")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 40, height: 40, alignment: .center)
-                    }
-                    .frame(width: 60, height: 60, alignment: .center)
-                    .clipShape(Circle())
-                    
-                    Text("Mask")
-                        .font(.custom("Avenir-Medium", size: 15))
-                        .foregroundColor(.black)
-                        .fontWeight(.semibold)
-                        .minimumScaleFactor(0.5)
-                }
-                .padding(10)
                 
-                VStack {
-                    ZStack {
-                        Color(red: 245/255, green: 243/255, blue: 223/255)
-                        Image("gloves")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 40, height: 40, alignment: .center)
+                NavigationLink(destination: MaskView()) {
+                    VStack {
+                        ZStack {
+                            Color(red: 250/255, green: 222/255, blue: 226/255)
+                            Image("mask")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 40, height: 40, alignment: .center)
+                        }
+                        .frame(width: 60, height: 60, alignment: .center)
+                        .clipShape(Circle())
+                        
+                        Text("Mask")
+                            .font(.custom("Avenir-Medium", size: 15))
+                            .foregroundColor(.black)
+                            .fontWeight(.semibold)
+                            .minimumScaleFactor(0.5)
                     }
-                    .frame(width: 60, height: 60, alignment: .center)
-                    .clipShape(Circle())
-                    
-                    Text("Gloves")
-                        .font(.custom("Avenir-Medium", size: 15))
-                        .foregroundColor(.black)
-                        .fontWeight(.semibold)
-                        .minimumScaleFactor(0.5)
+                    .padding(10)
                 }
-                .padding(10)
                 
-                VStack {
-                    ZStack {
-                        Color(red: 210/255, green: 217/255, blue: 253/255)
-                        Image("hand-sanitizer")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 40, height: 40, alignment: .center)
+                NavigationLink(destination: GlovesView()) {
+                    VStack {
+                        ZStack {
+                            Color(red: 245/255, green: 243/255, blue: 223/255)
+                            Image("gloves")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 40, height: 40, alignment: .center)
+                        }
+                        .frame(width: 60, height: 60, alignment: .center)
+                        .clipShape(Circle())
+                        
+                        Text("Gloves")
+                            .font(.custom("Avenir-Medium", size: 15))
+                            .foregroundColor(.black)
+                            .fontWeight(.semibold)
+                            .minimumScaleFactor(0.5)
                     }
-                    .frame(width: 60, height: 60, alignment: .center)
-                    .clipShape(Circle())
-                    
-                    Text("Alcohol")
-                        .font(.custom("Avenir-Medium", size: 15))
-                        .foregroundColor(.black)
-                        .fontWeight(.semibold)
-                        .minimumScaleFactor(0.5)
+                    .padding(10)
                 }
-                .padding(10)
                 
-                VStack {
-                    ZStack {
-                        Color(red: 222/255, green: 225/255, blue: 235/255)
-                        Image("soap")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 40, height: 40, alignment: .center)
+                NavigationLink(destination: AlcoholView()) {
+                    VStack {
+                        ZStack {
+                            Color(red: 210/255, green: 217/255, blue: 253/255)
+                            Image("hand-sanitizer")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 40, height: 40, alignment: .center)
+                        }
+                        .frame(width: 60, height: 60, alignment: .center)
+                        .clipShape(Circle())
+                        
+                        Text("Alcohol")
+                            .font(.custom("Avenir-Medium", size: 15))
+                            .foregroundColor(.black)
+                            .fontWeight(.semibold)
+                            .minimumScaleFactor(0.5)
                     }
-                    .frame(width: 60, height: 60, alignment: .center)
-                    .clipShape(Circle())
-                    
-                    Text("Soap")
-                        .font(.custom("Avenir-Medium", size: 15))
-                        .foregroundColor(.black)
-                        .fontWeight(.semibold)
-                        .minimumScaleFactor(0.5)
-                    
+                    .padding(10)
                 }
-                .padding(.bottom, 10)
+                
+                NavigationLink(destination: SoapView()) {
+                    VStack {
+                        ZStack {
+                            Color(red: 222/255, green: 225/255, blue: 235/255)
+                            Image("soap")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 40, height: 40, alignment: .center)
+                        }
+                        .frame(width: 60, height: 60, alignment: .center)
+                        .clipShape(Circle())
+                        
+                        Text("Soap")
+                            .font(.custom("Avenir-Medium", size: 15))
+                            .foregroundColor(.black)
+                            .fontWeight(.semibold)
+                            .minimumScaleFactor(0.5)
+                        
+                    }
+                    .padding(10)
+                }
             }
         }
+        .navigationTitle("Prevent Covid-19")
+        .navigationBarColor(backgroundColor: Color.customBlue, tintColor: .white)
     }
 }
 
