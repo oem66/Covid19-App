@@ -88,9 +88,11 @@ struct CountryCovidView: View {
                 }
                 .padding([.top, .bottom], 10.0)
             }
+            .listSeparatorStyle(style: .none)
             .onAppear {
                 getCovidStats()
             }
+
             
         }
         .navigationTitle("Global stats")
