@@ -9,165 +9,147 @@ import SwiftUI
 
 struct PreventionView: View {
     var body: some View {
-//        ZStack {
-//            Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
-//            
-//            VStack(alignment: .leading) {
-//                VStack {
-//                    HStack {
-//                            ZStack {
-//                                Color(red: 37/255, green: 96/255, blue: 245/255)
-//                                VStack(alignment: .leading) {
-//                                    
-//                                    Image("avoid")
-//                                        .resizable()
-//                                        .frame(width: 40, height: 40, alignment: .leading)
-//                                        .padding(.bottom, 10)
-//                                    
-//                                    Text("Physical distance")
-//                                        .font(.custom("Avenir-Medium", size: 20))
-//                                        .fontWeight(.semibold)
-//                                        .foregroundColor(.yellow)
-//                                        .padding(.bottom, 5)
-//                                        .minimumScaleFactor(0.5)
-//                                    
-//                                    Text("Avoid contact with sick people")
-//                                        .font(.custom("Avenir-Medium", size: 15))
-//                                        .fontWeight(.medium)
-//                                        .foregroundColor(.white)
-//                                        .padding(.bottom, 10)
-//                                        .minimumScaleFactor(0.5)
-//                                    
-//                                }
-//                                .padding(.all, 10)
-//                            }
-//                            .clipped()
-//                            .cornerRadius(15.0)
-//                        
-//                        Spacer()
-//                        
-//                            ZStack {
-//                                Color(red: 37/255, green: 96/255, blue: 245/255)
-//                                VStack(alignment: .leading) {
-//                                    
-//                                    Image("desinfectant")
-//                                        .resizable()
-//                                        .frame(width: 40, height: 40, alignment: .leading)
-//                                        .padding(.bottom, 10)
-//                                    
-//                                    Text("Hygiene")
-//                                        .font(.custom("Avenir-Medium", size: 20))
-//                                        .fontWeight(.semibold)
-//                                        .foregroundColor(.yellow)
-//                                        .padding(.bottom, 5)
-//                                        .minimumScaleFactor(0.5)
-//                                    
-//                                    Text("Wash your hands with soap")
-//                                        .font(.custom("Avenir-Medium", size: 15))
-//                                        .fontWeight(.medium)
-//                                        .foregroundColor(.white)
-//                                        .padding(.bottom, 10)
-//                                        .minimumScaleFactor(0.5)
-//                                    
-//                                }
-//                                .padding(.all, 10)
-//                            }
-//                            .clipped()
-//                            .cornerRadius(15.0)
-//                    }
-//                    
-//                    HStack {
-//                            ZStack {
-//                                Color(red: 37/255, green: 96/255, blue: 245/255)
-//                                VStack(alignment: .leading) {
-//                                    
-//                                    Image("face-mask")
-//                                        .resizable()
-//                                        .frame(width: 40, height: 40, alignment: .leading)
-//                                        .padding(.bottom, 10)
-//                                    
-//                                    Text("Use mask")
-//                                        .font(.custom("Avenir-Medium", size: 20))
-//                                        .fontWeight(.semibold)
-//                                        .foregroundColor(.yellow)
-//                                        .padding(.bottom, 5)
-//                                        .minimumScaleFactor(0.5)
-//                                    
-//                                    Text("Use medical face mask")
-//                                        .font(.custom("Avenir-Medium", size: 15))
-//                                        .fontWeight(.medium)
-//                                        .foregroundColor(.white)
-//                                        .padding(.bottom, 10)
-//                                        .minimumScaleFactor(0.5)
-//                                    
-//                                }
-//                                .padding(.all, 10)
-//                            }
-//                            .clipped()
-//                            .cornerRadius(15.0)
-//
-//                            ZStack {
-//                                Color(red: 37/255, green: 96/255, blue: 245/255)
-//                                VStack(alignment: .leading) {
-//                                    
-//                                    Image("hand-sanitizer-2")
-//                                        .resizable()
-//                                        .frame(width: 40, height: 40, alignment: .leading)
-//                                        .padding(.bottom, 10)
-//                                    
-//                                    Text("Clean surface")
-//                                        .font(.custom("Avenir-Medium", size: 20))
-//                                        .fontWeight(.semibold)
-//                                        .foregroundColor(.yellow)
-//                                        .padding(.bottom, 5)
-//                                        .minimumScaleFactor(0.5)
-//                                    
-//                                    Text("Clean surface with sanitiser")
-//                                        .font(.custom("Avenir-Medium", size: 15))
-//                                        .fontWeight(.medium)
-//                                        .foregroundColor(.white)
-//                                        .padding(.bottom, 10)
-//                                        .minimumScaleFactor(0.5)
-//                                    
-//                                }
-//                                .padding(.all, 10)
-//                            }
-//                            .clipped()
-//                            .cornerRadius(15.0)
-//                    }
-//                }
-//                .padding([.leading, .trailing, .bottom], 15)
-//            }
-//            .navigationTitle(Text("Prevention"))
-//            
-//        }
-        
-        VStack {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    Text("How to prevent?")
-                        .bold()
-                        .lineLimit(nil)
-                        .foregroundColor(.black)
-                        .font(.custom("Avenir-Medium", size: 25))
-                        .minimumScaleFactor(0.5)
-                        .padding(.bottom, 10)
-                    
-                    Text(Constants().preventionText)
-                        .lineLimit(nil)
-                        .foregroundColor(.black)
-                        .font(.custom("Avenir-Medium", size: 17))
-                        .minimumScaleFactor(0.5)
-                }
+        ScrollView {
+            VStack(alignment: .leading) {
+                PreventionPhysicalDistance()
+                    .padding(.bottom, 20)
+                PreventionHygiene()
+                    .padding(.bottom, 20)
+                PreventionUseMask()
+                    .padding(.bottom, 20)
+                PreventionCleanSurface()
+                    .padding(.bottom, 20)
+                
+                Text("How to prevent?")
+                    .bold()
+                    .lineLimit(nil)
+                    .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 25))
+                    .minimumScaleFactor(0.5)
+                    .padding(.bottom, 10)
+                
+                Text(Constants().preventionText)
+                    .lineLimit(nil)
+                    .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 17))
+                    .minimumScaleFactor(0.5)
             }
+            .padding(.all, 15)
         }
-        .padding([.top, .leading, .trailing, .bottom], 15)
-        .padding(.top, 5)
+        .navigationTitle("Prevention")
     }
 }
 
 struct PreventionView_Previews: PreviewProvider {
     static var previews: some View {
         PreventionView()
+    }
+}
+
+struct PreventionPhysicalDistance: View {
+    var body: some View {
+        HStack {
+            Image("avoid")
+                .resizable()
+                .frame(width: 50, height: 50, alignment: .center)
+            
+            Text("Physical distance")
+                .bold()
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 25))
+                .minimumScaleFactor(0.5)
+                .padding(.top, 20)
+        }
+        .padding(.bottom, 5)
+        
+        VStack {
+            Text(Constants().preventionPhysicalDistance)
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 17))
+                .minimumScaleFactor(0.5)
+        }
+    }
+}
+
+struct PreventionHygiene: View {
+    var body: some View {
+        HStack {
+            Image("desinfectant")
+                .resizable()
+                .frame(width: 50, height: 50, alignment: .center)
+            
+            Text("Hygiene")
+                .bold()
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 25))
+                .minimumScaleFactor(0.5)
+                .padding(.top, 20)
+        }
+        .padding(.bottom, 5)
+        
+        VStack {
+            Text(Constants().preventionHygiene)
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 17))
+                .minimumScaleFactor(0.5)
+        }
+    }
+}
+
+struct PreventionUseMask: View {
+    var body: some View {
+        HStack {
+            Image("face-mask")
+                .resizable()
+                .frame(width: 50, height: 50, alignment: .center)
+            
+            Text("Use mask")
+                .bold()
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 25))
+                .minimumScaleFactor(0.5)
+                .padding(.top, 20)
+        }
+        .padding(.bottom, 5)
+        
+        VStack {
+            Text(Constants().preventionUseMask)
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 17))
+                .minimumScaleFactor(0.5)
+        }
+    }
+}
+
+struct PreventionCleanSurface: View {
+    var body: some View {
+        HStack {
+            Image("hand-sanitizer-2")
+                .resizable()
+                .frame(width: 50, height: 50, alignment: .center)
+            
+            Text("Clean surface")
+                .bold()
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 25))
+                .minimumScaleFactor(0.5)
+                .padding(.top, 20)
+        }
+        .padding(.bottom, 5)
+        
+        VStack {
+            Text(Constants().preventionCleanSurface)
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 17))
+                .minimumScaleFactor(0.5)
+        }
     }
 }

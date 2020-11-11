@@ -38,6 +38,77 @@ class Constants {
     """
     
     // MARK: -Prevention
+    var preventionPhysicalDistance = """
+    When going out in public, it is important to stay at least 6 feet away from other people and wear a mask to slow the spread of COVID-19. Consider the following tips for practicing social distancing when you decide to go out.
+    
+    - Know Before You Go: Before going out, know and follow the guidance from local public health authorities where you live.
+    - Prepare for Transportation: Consider social distancing options to travel safely when running errands or commuting to and from work, whether walking, bicycling, wheelchair rolling, or using public transit, rideshares, or taxis. When using public transit, try to keep at least 6 feet from other passengers or transit operators – for example, when you are waiting at a bus station or selecting seats on a bus or train. When using rideshares or taxis, avoid pooled rides where multiple passengers are picked up, and sit in the back seat in larger vehicles so you can remain at least 6 feet away from the driver. Follow these additional tips to protect yourself while using transportation.
+    - Limit Contact When Running Errands: Only visit stores selling household essentials in person when you absolutely need to, and stay at least 6 feet away from others who are not from your household while shopping and in lines. If possible, use drive-thru, curbside pick-up, or delivery services to limit face-to-face contact with others. Maintain physical distance between yourself and delivery service providers during exchanges and wear a mask.
+    - Choose Safe Social Activities:It is possible to stay socially connected with friends and family who don’t live in your home by calling, using video chat, or staying connected through social media. If meeting others in person (e.g., at small outdoor gatherings, yard or driveway gathering with a small group of friends or family members), stay at least 6 feet from others who are not from your household. Follow these steps to stay safe if you will be participating in personal and social activities outside of your home.
+    - Keep Distance at Events and Gatherings: It is safest to avoid crowded places and gatherings where it may be difficult to stay at least 6 feet away from others who are not from your household. If you are in a crowded space, try to keep 6 feet of space between yourself and others at all times, and wear a mask. Masks are especially important in times when physical distancing is difficult. Pay attention to any physical guides, such as tape markings on floors or signs on walls, directing attendees to remain at least 6 feet apart from each other in lines or at other times. Allow other people 6 feet of space when you pass by them in both indoor and outdoor settings.
+    - Stay Distanced While Being Active: Consider going for a walk, bike ride, or wheelchair roll in your neighborhood or in another safe location where you can maintain at least 6 feet of distance between yourself and other pedestrians and cyclists. If you decide to visit a nearby park, trail, or recreational facility, first check for closures or restrictions. If open, consider how many other people might be there and choose a location where it will be possible to keep at least 6 feet of space between yourself and other people who are not from your household.
+
+    Many people have personal circumstances or situations that present challenges with practicing social distancing to prevent the spread of COVID-19. Please see the following guidance for additional recommendations and considerations:
+    """
+    
+    var preventionHygiene = """
+    Personal hygiene
+    Simple hygiene measures can help protect your family’s health and everyone else's.
+
+    Don’t touch your face
+    Avoid touching your eyes, nose and mouth.
+
+    Don’t cough or sneeze into your hands
+    Cover your mouth and nose with your elbow or tissue when coughing or sneezing. Dispose of used tissue immediately.
+
+    Keep your distance
+    Maintain a distance of at least 1 meter (3 feet) from people who are coughing or sneezing.
+
+    Wash, wash, wash your hands
+    Yes, you’re hearing it everywhere, because it’s the best line of defence. Wash hands frequently with soap and water for at least 20-30 seconds.
+
+    An easy way to time it with your children is by singing the full happy birthday song, twice.
+
+    Make sure to wash hands after you blow your nose, sneeze into a tissue, use the restroom, when you leave and return to your home, before preparing or eating food, applying make-up, handling contact lenses etc.
+
+    If using a hand sanitizer ensure that it contains at least 60 per cent alcohol, ensure coverage on all parts of the hands and rub hands together for 20-30 seconds until hands feel dry. If hands are visibly dirty, always wash hands with soap and water.
+
+    Did you know? Cold water and warm water are equally effective at killing germs and viruses — as long as you use soap and wash your hands the right way!
+    """
+    
+    var preventionUseMask = """
+    If COVID-19 is spreading in your community, stay safe by taking some simple precautions, such as physical distancing, wearing a mask, keeping rooms well ventilated, avoiding crowds, cleaning your hands, and coughing into a bent elbow or tissue. Check local advice where you live and work. Do it all!
+
+    Make wearing a mask a normal part of being around other people.
+
+    Masks should be used as part of a comprehensive strategy of measures to suppress transmission and save lives; the use of a mask alone is not sufficient to provide an adequate level of protection against COVID-19
+
+    Here are the basics of how to wear a mask:
+
+    - Clean your hands before you put your mask on, as well as before and after you take it off.
+    - Make sure it covers both your nose, mouth and chin.
+    Here are some specifics on what type of mask to wear and when, depending on how much virus is circulating where you live, where you go and who you are.
+
+    - Wear a fabric mask unless you’re in a particular risk group. This is especially important when you can’t stay physically distanced, particularly in crowded and poorly ventilated indoor settings.
+    - Wear a medical/surgical mask if you:
+        - Are over 60,
+        - Have underlying medical conditions
+        - Are feeling unwell, and/or
+    looking after an ill family member.
+    """
+    
+    var preventionCleanSurface = """
+    - Start cleaning from cleaner areas and proceed towards dirtier areas. All surfaces that are frequently touched (e.g. door handles, armrests, table tops, light switches, water taps) need to be cleaned thoroughly and frequently.
+    - In public premises where people touch the surfaces, the cleaning should be done daily at least. If possible even more often e.g. between 2-4 hours especially during the epidemic.
+    - The public premises of workplaces must be cleaned using different equipment than the premises used by employees.
+    - Use a mildly alkaline all-purpose detergent for cleaning. The cleaning of sanitary facilities can be enhanced by using a disinfectant.
+    - Wear gloves to protect the hands when cleaning surfaces. Use tight-fitting disposable gloves, for example, as all-purpose gloves, or chemical resistant gloves. Learn more about the instructions on how to remove gloves (in Finnish). https://www.ttl.fi/wp-content/uploads/2016/11/Malliratkaisu_Kertakayttokasineiden_riisuminen.pdf
+    - In particular, bins of bio- and mixed waste are coated with easily removable, leakproof bags in waste bins. Monitor waste bins and do not let them get more than three-quarters full.  Waste bins are emptied daily, especially in public premises. The collected bin bags must be closed tightly.
+    - Carefully clean the equipment used in cleaning at the end of the cleaning process. Wash reusable cleaning cloths at a temperature of at least 90°C or disinfectant. Clean your keys, the handles of the cleaning cart and the floor cleaning equipment and the contact surfaces of the cleaner containers with the disinfecting multi-purpose cleaner.
+    - After cleaning, the permanent gloves must either be carefully washed and dried. Disposable gloves are placed in mixed waste. Wash your hands up to your elbows with water and soap when the gloves are taken off.
+    - Work clothes is changed to your own clothes before leaving the workplace. The work clothes must be washed at the workplace or your employer must acquire appropriate laundry services.
+    """
+    
     var preventionText = """
     People who felt unwell should stay home and see a doctor. This will help person get the right advice. When convalescing at home, people need to eat, sleep and use their own clothes with family members. In particular, if you feel short of breath, call a physician and seek treatment immediately.
     """
