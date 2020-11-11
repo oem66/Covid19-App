@@ -11,8 +11,8 @@ struct GlovesView: View {
     var body: some View {
         ScrollView {
             GlovesContentView()
+                .padding(.all, 15)
         }
-        .padding(.all, 15)
         .navigationTitle("Gloves")
     }
 }
