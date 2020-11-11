@@ -167,14 +167,14 @@ struct PreventionView: View {
                         .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
-                        .font(.custom("Avenir-Medium", size: 22))
+                        .font(.custom("Avenir-Medium", size: 25))
                         .minimumScaleFactor(0.5)
+                        .padding(.bottom, 10)
                     
                     Text(preventionText)
-                        .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
-                        .font(.custom("Avenir-Medium", size: 15))
+                        .font(.custom("Avenir-Medium", size: 17))
                         .minimumScaleFactor(0.5)
                 }
             }

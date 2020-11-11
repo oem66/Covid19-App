@@ -38,7 +38,6 @@ struct MaskView: View {
         ScrollView {
             VStack {
                 Text("CDC recommends that people wear masks in public settings, like on public and mass transportation, at events and gatherings, and anywhere they will be around other people.")
-                    .bold()
                     .lineLimit(nil)
                     .foregroundColor(.black)
                     .font(.custom("Avenir-Medium", size: 17))
@@ -53,7 +52,6 @@ struct MaskView: View {
                     .padding(.top, 20)
                 
                 Text("\(overview)")
-                    .bold()
                     .lineLimit(nil)
                     .foregroundColor(.black)
                     .font(.custom("Avenir-Medium", size: 17))
@@ -68,7 +66,6 @@ struct MaskView: View {
                     .padding(.top, 20)
                 
                 Text("When selecting a mask, there are many choices. Here are some do’s and don’ts.")
-                    .bold()
                     .lineLimit(nil)
                     .foregroundColor(.black)
                     .font(.custom("Avenir-Medium", size: 17))
@@ -109,14 +106,12 @@ struct MaskView: View {
                         .minimumScaleFactor(0.5)
                     
                     Text("Wear a mask correctly and consistently for the best protection.")
-                        .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 17))
                         .minimumScaleFactor(0.5)
                     
                     Text("\(howToWearList)")
-                        .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 17))
@@ -134,7 +129,6 @@ struct MaskView: View {
                         .padding(.top, 20)
                     
                     Text("\(doWearMaskThat)")
-                        .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 17))
@@ -179,14 +173,12 @@ struct MaskView: View {
                         .minimumScaleFactor(0.5)
                     
                     Text("Masks should be washed regularly. Always remove masks correctly and wash your hands after handling or touching a used mask.")
-                        .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 17))
                         .minimumScaleFactor(0.5)
                     
                     Text("\(howToCleanList)")
-                        .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 17))

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1702C2F4255ADF1500493E45 /* FavoriteCountries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702C2F3255ADF1500493E45 /* FavoriteCountries.swift */; };
 		173D56F02531C7D4006FAD3A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 173D56EF2531C7D4006FAD3A /* SwiftUICharts */; };
 		174E31DC2527B3AF00375DC3 /* CovidInfection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E31DB2527B3AF00375DC3 /* CovidInfection.swift */; };
 		174E31DF2527BD7500375DC3 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E31DE2527BD7500375DC3 /* Country.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1702C2F3255ADF1500493E45 /* FavoriteCountries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCountries.swift; sourceTree = "<group>"; };
 		174E31DB2527B3AF00375DC3 /* CovidInfection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidInfection.swift; sourceTree = "<group>"; };
 		174E31DE2527BD7500375DC3 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		174E31EC2527C8DB00375DC3 /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				17FEE48E252BB942004566D6 /* ReportsView.swift */,
 				17FEE491252BB962004566D6 /* CountryCovidView.swift */,
 				1759056B254AF2520067984D /* NavigationBarColor.swift */,
+				1702C2F3255ADF1500493E45 /* FavoriteCountries.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				17D93EF62527131000E3BBC2 /* WelcomeView.swift in Sources */,
 				174E31DF2527BD7500375DC3 /* Country.swift in Sources */,
+				1702C2F4255ADF1500493E45 /* FavoriteCountries.swift in Sources */,
 				17D93EEA2527116200E3BBC2 /* Covid19VirusTracker.xcdatamodeld in Sources */,
 				17590581254AFE9D0067984D /* SoapView.swift in Sources */,
 				17D93F01252732E600E3BBC2 /* Webservice.swift in Sources */,

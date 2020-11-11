@@ -35,33 +35,32 @@ struct SymptomsView: View {
             People with mild symptoms who are otherwise healthy should manage their symptoms at home.
             On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.
         """
-        
-        VStack {
-            ZStack {
-                Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
+        ScrollView {
+            VStack {
+                ZStack {
+                    Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
+                    
+                    Image("pneumonia")
+                        .resizable()
+                        .frame(width: 150, height: 150, alignment: .center)
+                        .padding([.top, .bottom], 20)
+                }
+                .frame(height: 180, alignment: .center)
                 
-                Image("pneumonia")
-                    .resizable()
-                    .frame(width: 150, height: 150, alignment: .center)
-                    .padding([.top, .bottom], 20)
-            }
-            .frame(height: 180, alignment: .center)
-            
-            ScrollView {
+                
                 VStack(alignment: .leading) {
                     Text(sympthomText)
-                        .bold()
                         .lineLimit(nil)
                         .foregroundColor(.black)
-                        .font(.custom("Avenir-Medium", size: 15))
+                        .font(.custom("Avenir-Medium", size: 17))
                         .minimumScaleFactor(0.5)
                 }
                 .padding(.top, 15)
             }
+            .padding([.top, .leading, .trailing, .bottom], 15)
+            .padding(.top, 5)
+            .navigationTitle(Text("Symptoms"))
         }
-        .padding([.top, .leading, .trailing, .bottom], 15)
-        .padding(.top, 5)
-        .navigationTitle(Text("Symptoms"))
     }
     
 }

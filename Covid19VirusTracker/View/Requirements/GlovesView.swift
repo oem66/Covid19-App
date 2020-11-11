@@ -45,31 +45,63 @@ struct GlovesView: View {
         ScrollView {
             VStack {
                 Text("When to use gloves?")
+                    .bold()
+                    .lineLimit(nil)
                     .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 25))
+                    .minimumScaleFactor(0.5)
+                    .padding(.top, 20)
                 
                 Text("\(whenCleaningList)")
+                    .lineLimit(nil)
                     .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 17))
+                    .minimumScaleFactor(0.5)
                 
                 Text("When caring for someone who is sick: ")
+                    .bold()
+                    .lineLimit(nil)
                     .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 25))
+                    .minimumScaleFactor(0.5)
+                    .padding(.top, 20)
                 
                 Text("If you are providing care to someone who is sick at home or in another non-healthcare setting")
                     .foregroundColor(.black)
                 
                 Text("\(whenCaringForSomeone)")
+                    .lineLimit(nil)
                     .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 17))
+                    .minimumScaleFactor(0.5)
                 
                 Text("When gloves aren’t needed?")
+                    .bold()
+                    .lineLimit(nil)
                     .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 25))
+                    .minimumScaleFactor(0.5)
+                    .padding(.top, 20)
                 
                 Text("\(whenGlovesArentNedded)")
+                    .lineLimit(nil)
                     .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 17))
+                    .minimumScaleFactor(0.5)
                 
                 Text("Protect yourself in other ways")
+                    .bold()
+                    .lineLimit(nil)
                     .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 25))
+                    .minimumScaleFactor(0.5)
+                    .padding(.top, 20)
                 
                 Text("\(youCanProtectYourself)")
+                    .lineLimit(nil)
                     .foregroundColor(.black)
+                    .font(.custom("Avenir-Medium", size: 17))
+                    .minimumScaleFactor(0.5)
                 
             }
         }

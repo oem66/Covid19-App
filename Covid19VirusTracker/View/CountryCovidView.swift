@@ -51,6 +51,7 @@ struct CountryCovidView: View {
                         .minimumScaleFactor(0.5)
                 }
             }
+            .padding(.top, 10)
             
             List(covidStats.Countries, id: \.self) { countryStat in
                 ZStack {
