@@ -9,32 +9,6 @@ import SwiftUI
 
 struct MaskView: View {
     var body: some View {
-        let overview = """
-        - Wear masks with two or more layers to stop the spread of COVID-19
-        - Wear the mask over your nose and mouth and secure it under your chin
-        - Masks should be worn by people two years and older
-        - Masks should NOT be worn by children younger than two, people who have trouble breathing, or people who cannot remove the mask without assistance
-        - Do NOT wear masks intended for healthcare workers, for example, N95 respirators
-        - CDC does not recommend the use of gaiters or face shields. Evaluation of these face covers is on-going but effectiveness is unknown at this time.
-        - Evaluation of mask and gaiter materials and structure is ongoing.
-        """
-        
-        let howToWearList = """
-        - Be sure to wash your hands before putting on a mask
-        - Do NOT touch the mask when wearing it
-        """
-        
-        let doWearMaskThat = """
-        - Covers your nose and mouth and secure it under your chin
-        - Fits snugly against the sides of your face
-        """
-        
-        let howToCleanList = """
-        - Include your mask with your regular laundry
-        - Use regular laundry detergent and the warmest appropriate water setting for the cloth used to make the mask
-        - Use the highest heat setting and leave in the dryer until completely dry
-        """
-        
         ScrollView {
             VStack {
                 Text("CDC recommends that people wear masks in public settings, like on public and mass transportation, at events and gatherings, and anywhere they will be around other people.")
@@ -51,7 +25,7 @@ struct MaskView: View {
                     .minimumScaleFactor(0.5)
                     .padding(.top, 20)
                 
-                Text("\(overview)")
+                Text("\(Constants().overview)")
                     .lineLimit(nil)
                     .foregroundColor(.black)
                     .font(.custom("Avenir-Medium", size: 17))
@@ -111,7 +85,7 @@ struct MaskView: View {
                         .font(.custom("Avenir-Medium", size: 17))
                         .minimumScaleFactor(0.5)
                     
-                    Text("\(howToWearList)")
+                    Text("\(Constants().howToWearList)")
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 17))
@@ -128,7 +102,7 @@ struct MaskView: View {
                         .minimumScaleFactor(0.5)
                         .padding(.top, 20)
                     
-                    Text("\(doWearMaskThat)")
+                    Text("\(Constants().doWearMaskThat)")
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 17))
@@ -178,7 +152,7 @@ struct MaskView: View {
                         .font(.custom("Avenir-Medium", size: 17))
                         .minimumScaleFactor(0.5)
                     
-                    Text("\(howToCleanList)")
+                    Text("\(Constants().howToCleanList)")
                         .lineLimit(nil)
                         .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 17))

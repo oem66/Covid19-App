@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				1759056E254AF2C30067984D /* Extensions */,
-				17FEE494252BBA4A004566D6 /* Constrants */,
+				17FEE494252BBA4A004566D6 /* Constants */,
 				17D93EF2252711B500E3BBC2 /* Model */,
 				17D93EF3252711BB00E3BBC2 /* View */,
 				17D93EFF252732CA00E3BBC2 /* Network */,
@@ -174,12 +174,12 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		17FEE494252BBA4A004566D6 /* Constrants */ = {
+		17FEE494252BBA4A004566D6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				17FEE495252BBA5C004566D6 /* Constants.swift */,
 			);
-			path = Constrants;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
