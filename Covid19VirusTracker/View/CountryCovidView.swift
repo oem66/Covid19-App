@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct CountryCovidView: View {
     
     @State var covidStats: CovidInfection = CovidInfection()
+    
+    let queue = DispatchQueue(
+        label: "ConcurrentQueue",
+        qos: .userInitiated,
+        attributes: [.concurrent]
+    )
     
     var body: some View {
         VStack(alignment: .center) {
@@ -103,14 +110,16 @@ struct CountryCovidView: View {
 extension CountryCovidView {
     
     func getCovidStats() {
-        Webservice().getCovidInfections { result in
-            switch result {
-            case .success(let stats):
-                DispatchQueue.main.async {
-                    self.covidStats = stats
+        queue.async {
+            Webservice().getCovidInfections { result in
+                switch result {
+                case .success(let stats):
+                    DispatchQueue.main.async {
+                        self.covidStats = stats
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
-            case .failure(let error):
-                print(error.localizedDescription)
             }
         }
     }
