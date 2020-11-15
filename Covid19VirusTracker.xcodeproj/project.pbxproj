@@ -19,6 +19,8 @@
 		1759057B254AFE610067984D /* GlovesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759057A254AFE610067984D /* GlovesView.swift */; };
 		1759057E254AFE890067984D /* AlcoholView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759057D254AFE890067984D /* AlcoholView.swift */; };
 		17590581254AFE9D0067984D /* SoapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17590580254AFE9D0067984D /* SoapView.swift */; };
+		1782034F255ED01D00B4A3EB /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782034E255ED01D00B4A3EB /* CountryService.swift */; };
+		17820352255ED3A300B4A3EB /* CountryInfectionStatsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17820351255ED3A300B4A3EB /* CountryInfectionStatsVM.swift */; };
 		17D93EDE2527116000E3BBC2 /* Covid19VirusTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D93EDD2527116000E3BBC2 /* Covid19VirusTrackerApp.swift */; };
 		17D93EE02527116000E3BBC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D93EDF2527116000E3BBC2 /* ContentView.swift */; };
 		17D93EE22527116200E3BBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17D93EE12527116200E3BBC2 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		1759057A254AFE610067984D /* GlovesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlovesView.swift; sourceTree = "<group>"; };
 		1759057D254AFE890067984D /* AlcoholView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholView.swift; sourceTree = "<group>"; };
 		17590580254AFE9D0067984D /* SoapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoapView.swift; sourceTree = "<group>"; };
+		1782034E255ED01D00B4A3EB /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
+		17820351255ED3A300B4A3EB /* CountryInfectionStatsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfectionStatsVM.swift; sourceTree = "<group>"; };
 		17D93EDA2527116000E3BBC2 /* Covid19VirusTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covid19VirusTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D93EDD2527116000E3BBC2 /* Covid19VirusTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19VirusTrackerApp.swift; sourceTree = "<group>"; };
 		17D93EDF2527116000E3BBC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 			path = Requirements;
 			sourceTree = "<group>";
 		};
+		1782034C255EC03800B4A3EB /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				17820351255ED3A300B4A3EB /* CountryInfectionStatsVM.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		17D93ED12527116000E3BBC2 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +132,7 @@
 				17FEE494252BBA4A004566D6 /* Constants */,
 				17D93EF2252711B500E3BBC2 /* Model */,
 				17D93EF3252711BB00E3BBC2 /* View */,
+				1782034C255EC03800B4A3EB /* View Model */,
 				17D93EFF252732CA00E3BBC2 /* Network */,
 				17D93EDD2527116000E3BBC2 /* Covid19VirusTrackerApp.swift */,
 				17D93EE12527116200E3BBC2 /* Assets.xcassets */,
@@ -170,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				17D93F00252732E600E3BBC2 /* Webservice.swift */,
+				1782034E255ED01D00B4A3EB /* CountryService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -269,6 +283,7 @@
 				17FEE496252BBA5C004566D6 /* Constants.swift in Sources */,
 				17FEE489252BB8CA004566D6 /* SymptomsView.swift in Sources */,
 				1759056C254AF2520067984D /* NavigationBarColor.swift in Sources */,
+				1782034F255ED01D00B4A3EB /* CountryService.swift in Sources */,
 				17D93EE72527116200E3BBC2 /* Persistence.swift in Sources */,
 				17FEE48F252BB942004566D6 /* ReportsView.swift in Sources */,
 				17D93EFA252731F500E3BBC2 /* HomeView.swift in Sources */,
@@ -278,6 +293,7 @@
 				17FEE492252BB962004566D6 /* CountryCovidView.swift in Sources */,
 				17D93EDE2527116000E3BBC2 /* Covid19VirusTrackerApp.swift in Sources */,
 				174E31ED2527C8DB00375DC3 /* CountryView.swift in Sources */,
+				17820352255ED3A300B4A3EB /* CountryInfectionStatsVM.swift in Sources */,
 				17590574254AF5010067984D /* Color.swift in Sources */,
 				17590578254AFD850067984D /* MaskView.swift in Sources */,
 			);

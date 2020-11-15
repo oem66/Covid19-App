@@ -10,31 +10,9 @@ import SwiftUI
 struct PreventionView: View {
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                PreventionPhysicalDistance()
-                    .padding(.bottom, 20)
-                PreventionHygiene()
-                    .padding(.bottom, 20)
-                PreventionUseMask()
-                    .padding(.bottom, 20)
-                PreventionCleanSurface()
-                    .padding(.bottom, 20)
-                
-                Text("How to prevent?")
-                    .bold()
-                    .lineLimit(nil)
-                    .foregroundColor(.black)
-                    .font(.custom("Avenir-Medium", size: 25))
-                    .minimumScaleFactor(0.5)
-                    .padding(.bottom, 10)
-                
-                Text(Constants().preventionText)
-                    .lineLimit(nil)
-                    .foregroundColor(.black)
-                    .font(.custom("Avenir-Medium", size: 17))
-                    .minimumScaleFactor(0.5)
-            }
-            .padding(.all, 15)
+            PreventionViewContent()
+                .padding(.all, 15)
+                .background(Color.white)
         }
         .navigationTitle("Prevention")
     }
@@ -43,6 +21,35 @@ struct PreventionView: View {
 struct PreventionView_Previews: PreviewProvider {
     static var previews: some View {
         PreventionView()
+    }
+}
+
+struct PreventionViewContent: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            PreventionPhysicalDistance()
+                .padding(.bottom, 20)
+            PreventionHygiene()
+                .padding(.bottom, 20)
+            PreventionUseMask()
+                .padding(.bottom, 20)
+            PreventionCleanSurface()
+                .padding(.bottom, 20)
+            
+            Text("How to prevent?")
+                .bold()
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 25))
+                .minimumScaleFactor(0.5)
+                .padding(.bottom, 10)
+            
+            Text(Constants().preventionText)
+                .lineLimit(nil)
+                .foregroundColor(.black)
+                .font(.custom("Avenir-Medium", size: 17))
+                .minimumScaleFactor(0.5)
+        }
     }
 }
 
