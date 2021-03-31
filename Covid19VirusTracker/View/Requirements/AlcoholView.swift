@@ -35,10 +35,11 @@ struct AlcoholContentView: View {
                 .padding(.top, 20)
             
             Text(Constants().alcoholBackground)
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
             Text("Purpose")
                 .bold()
@@ -49,10 +50,11 @@ struct AlcoholContentView: View {
                 .padding(.top, 20)
             
             Text(Constants().alcoholPurpose)
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
             Text("General recommendations for cleaning and disinfection of households with people isolated in home care (e.g. suspected/confirmed to have COVID-19)")
                 .bold()
@@ -63,10 +65,11 @@ struct AlcoholContentView: View {
                 .padding(.top, 20)
             
             Text(Constants().alcoholGeneralRecommendations)
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
         }
     }
 }

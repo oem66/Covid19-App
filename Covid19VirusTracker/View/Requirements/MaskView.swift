@@ -27,10 +27,11 @@ struct MaskContentView: View {
     var body: some View {
         VStack {
             Text("CDC recommends that people wear masks in public settings, like on public and mass transportation, at events and gatherings, and anywhere they will be around other people.")
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
             Text("Overview")
                 .bold()
@@ -41,10 +42,11 @@ struct MaskContentView: View {
                 .padding(.top, 20)
             
             Text("\(Constants().overview)")
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
             Text("How to Select")
                 .bold()
@@ -55,10 +57,11 @@ struct MaskContentView: View {
                 .padding(.top, 20)
             
             Text("When selecting a mask, there are many choices. Here are some do’s and don’ts.")
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
             VStack(alignment: .center) {
                 Image("do-choose-masks-medium")
@@ -95,16 +98,18 @@ struct MaskContentView: View {
                     .minimumScaleFactor(0.5)
                 
                 Text("Wear a mask correctly and consistently for the best protection.")
-                    .lineLimit(nil)
+                    .font(.custom("Avenir-Medium", size: 16))
                     .foregroundColor(.black)
-                    .font(.custom("Avenir-Medium", size: 17))
+                    .fontWeight(.semibold)
                     .minimumScaleFactor(0.5)
+                    .padding(10)
                 
                 Text("\(Constants().howToWearList)")
-                    .lineLimit(nil)
+                    .font(.custom("Avenir-Medium", size: 16))
                     .foregroundColor(.black)
-                    .font(.custom("Avenir-Medium", size: 17))
+                    .fontWeight(.semibold)
                     .minimumScaleFactor(0.5)
+                    .padding(10)
             }
             
             
@@ -118,10 +123,11 @@ struct MaskContentView: View {
                     .padding(.top, 20)
                 
                 Text("\(Constants().doWearMaskThat)")
-                    .lineLimit(nil)
+                    .font(.custom("Avenir-Medium", size: 16))
                     .foregroundColor(.black)
-                    .font(.custom("Avenir-Medium", size: 17))
+                    .fontWeight(.semibold)
                     .minimumScaleFactor(0.5)
+                    .padding(10)
             }
             
             VStack {
@@ -162,16 +168,18 @@ struct MaskContentView: View {
                     .minimumScaleFactor(0.5)
                 
                 Text("Masks should be washed regularly. Always remove masks correctly and wash your hands after handling or touching a used mask.")
-                    .lineLimit(nil)
+                    .font(.custom("Avenir-Medium", size: 16))
                     .foregroundColor(.black)
-                    .font(.custom("Avenir-Medium", size: 17))
+                    .fontWeight(.semibold)
                     .minimumScaleFactor(0.5)
+                    .padding(10)
                 
                 Text("\(Constants().howToCleanList)")
-                    .lineLimit(nil)
+                    .font(.custom("Avenir-Medium", size: 16))
                     .foregroundColor(.black)
-                    .font(.custom("Avenir-Medium", size: 17))
+                    .fontWeight(.semibold)
                     .minimumScaleFactor(0.5)
+                    .padding(10)
             }
         }
     }

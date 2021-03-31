@@ -34,16 +34,24 @@ struct SymptomsViewContent: View {
                     .padding([.top, .bottom], 20)
             }
             .frame(height: 180, alignment: .center)
+            .clipped()
+            .cornerRadius(10.0)
             
-            
-            VStack(alignment: .leading) {
-                Text(Constants().sympthomText)
-                    .lineLimit(nil)
-                    .foregroundColor(.black)
-                    .font(.custom("Avenir-Medium", size: 17))
-                    .minimumScaleFactor(0.5)
+            ZStack {
+//
+                Color(red: 44/255, green: 42/255, blue: 232/255)
+                VStack(alignment: .leading) {
+                    Text(Constants().sympthomText)
+                        .font(.custom("Avenir-Medium", size: 16))
+                        .foregroundColor(.white)
+                        .fontWeight(.semibold)
+                        .minimumScaleFactor(0.5)
+                        .padding(10)
+                }
+                .padding(.top, 15)
             }
-            .padding(.top, 15)
+            .clipped()
+            .cornerRadius(10.0)
         }
         .padding([.top, .leading, .trailing, .bottom], 15)
         .padding(.top, 5)

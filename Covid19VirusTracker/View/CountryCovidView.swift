@@ -100,8 +100,6 @@ struct CountryCovidView: View {
             .onAppear {
                 getCovidStats()
             }
-
-            
         }
         .navigationTitle("Global stats")
     }

@@ -59,10 +59,11 @@ struct SoapWashHands: View {
         
         VStack {
             Text(Constants().soapWashHands)
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
         }
     }
 }
@@ -86,10 +87,11 @@ struct SoapAvoidContact: View {
         
         VStack {
             Text(Constants().soapAvoidContact)
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
         }
     }
 }
@@ -113,10 +115,11 @@ struct SoapCoverMouth: View {
         
         VStack {
             Text(Constants().soapCoverSneezes)
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
         }
     }
 }
@@ -140,10 +143,11 @@ struct SoapCoverMouthMask: View {
         
         VStack {
             Text(Constants().soapCoverMouth)
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
         }
     }
 }
@@ -167,10 +171,11 @@ struct SoapTrackHealth: View {
         
         VStack {
             Text(Constants().soapMonitorHealth)
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
         }
     }
 }

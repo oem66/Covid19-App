@@ -35,10 +35,11 @@ struct GlovesContentView: View {
                 .padding(.top, 20)
             
             Text("\(Constants().whenCleaningList)")
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
             Text("When caring for someone who is sick: ")
                 .bold()
@@ -52,10 +53,11 @@ struct GlovesContentView: View {
                 .foregroundColor(.black)
             
             Text("\(Constants().whenCaringForSomeone)")
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
             Text("When gloves aren’t needed?")
                 .bold()
@@ -66,10 +68,11 @@ struct GlovesContentView: View {
                 .padding(.top, 20)
             
             Text("\(Constants().whenGlovesArentNedded)")
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
             Text("Protect yourself in other ways")
                 .bold()
@@ -80,10 +83,11 @@ struct GlovesContentView: View {
                 .padding(.top, 20)
             
             Text("\(Constants().youCanProtectYourself)")
-                .lineLimit(nil)
+                .font(.custom("Avenir-Medium", size: 16))
                 .foregroundColor(.black)
-                .font(.custom("Avenir-Medium", size: 17))
+                .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
+                .padding(10)
             
         }
     }
