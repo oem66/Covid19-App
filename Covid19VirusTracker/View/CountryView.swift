@@ -57,6 +57,9 @@ struct CountryView: View {
                 .animation(.default)
             }
         }
+        .navigationBarItems(trailing: NavigationLink(destination: FavoriteCountries()){
+            Image(systemName: "star.fill")
+        })
         
         // (countries.filter({ self.text.isEmpty ? true : $0.name.contains(self.text), id: \.name}) /*countries, id: \.name*/)
         

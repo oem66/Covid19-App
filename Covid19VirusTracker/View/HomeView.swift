@@ -68,8 +68,8 @@ struct HomeViewContent: View {
             }
         }
         .navigationTitle("Prevent Covid-19")
-        .navigationBarItems(trailing: NavigationLink(destination: FavoriteCountries()){
-            Image(systemName: "star.fill")
+        .navigationBarItems(trailing: NavigationLink(destination: HealthStats()) {
+            Image(systemName: "heart.text.square")
         })
         .navigationBarColor(backgroundColor: Color.customBlue, tintColor: .white)
     }
