@@ -16,12 +16,6 @@ struct SymptomsView: View {
     }
 }
 
-struct SymptomsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SymptomsView()
-    }
-}
-
 struct SymptomsViewContent: View {
     var body: some View {
         VStack {
@@ -38,12 +32,11 @@ struct SymptomsViewContent: View {
             .cornerRadius(10.0)
             
             ZStack {
-//
-                Color(red: 44/255, green: 42/255, blue: 232/255)
+                Color(red: 241/255, green: 241/255, blue: 249/255)
                 VStack(alignment: .leading) {
                     Text(Constants().sympthomText)
                         .font(.custom("Avenir-Medium", size: 16))
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .fontWeight(.semibold)
                         .minimumScaleFactor(0.5)
                         .padding(10)

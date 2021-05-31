@@ -19,66 +19,57 @@ struct ReportsView: View {
         var globalDeaths = covidStats.Global.TotalDeaths
         var globalRecovered = covidStats.Global.TotalRecovered
         
-        ZStack {
-            Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
-            
-            HStack {
-                PieChartView(data: [Double(globalConfirmed),Double(globalDeaths),Double(globalRecovered)], title: "Global stats", legend: "Infections")
-                
-                Spacer()
-                
-                VStack(alignment: .leading) {
-                    Text("Confirmed: \(globalConfirmed)")
-                        .bold()
-                        .foregroundColor(.orange)
-                        .font(.custom("Avenir-Medium", size: 14))
-                        .padding(.bottom, 10)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                    
-                    Text("Deaths: \(globalDeaths)")
-                        .bold()
-                        .foregroundColor(.red)
-                        .font(.custom("Avenir-Medium", size: 14))
-                        .padding(.bottom, 10)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                    
-                    Text("Recovered: \(globalRecovered)")
-                        .bold()
-                        .foregroundColor(.green)
-                        .font(.custom("Avenir-Medium", size: 14))
-                        .padding(.bottom, 10)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                }
-            }
-            .padding(.all, 5)
-            .navigationTitle("Infection reports")
-            .onAppear {
-                getCovidStats()
-            }
-        }
-        
-        Text("Reports by country")
-            .bold()
-            .foregroundColor(.black)
-            .font(.custom("Avenir-Medium", size: 22))
-            .lineLimit(1)
-            .minimumScaleFactor(0.5)
+        //        ZStack {
+        //            Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
+        //
+        //            HStack {
+        //                PieChartView(data: [Double(globalConfirmed),Double(globalDeaths),Double(globalRecovered)], title: "Global stats", legend: "Infections")
+        //
+        //                Spacer()
+        //
+        //                VStack(alignment: .leading) {
+        //                    Text("Confirmed: \(globalConfirmed)")
+        //                        .bold()
+        //                        .foregroundColor(.orange)
+        //                        .font(.custom("Avenir-Medium", size: 14))
+        //                        .padding(.bottom, 10)
+        //                        .lineLimit(1)
+        //                        .minimumScaleFactor(0.5)
+        //
+        //                    Text("Deaths: \(globalDeaths)")
+        //                        .bold()
+        //                        .foregroundColor(.red)
+        //                        .font(.custom("Avenir-Medium", size: 14))
+        //                        .padding(.bottom, 10)
+        //                        .lineLimit(1)
+        //                        .minimumScaleFactor(0.5)
+        //
+        //                    Text("Recovered: \(globalRecovered)")
+        //                        .bold()
+        //                        .foregroundColor(.green)
+        //                        .font(.custom("Avenir-Medium", size: 14))
+        //                        .padding(.bottom, 10)
+        //                        .lineLimit(1)
+        //                        .minimumScaleFactor(0.5)
+        //                }
+        //            }
+        //            .padding(.all, 5)
+        //            .navigationTitle("Infection reports")
+        //            .onAppear {
+        //                getCovidStats()
+        //            }
+        //        }
         
         List(covidStats.Countries, id: \.self) { countryStat in
             
             // Country stats
-            var countryName = countryStat.Country
-            var countryConfirmed = countryStat.TotalConfirmed
-            var countryDeaths = countryStat.TotalDeaths
-            var countryRecovered = countryStat.TotalRecovered
+            let countryName = countryStat.Country
+            let countryConfirmed = countryStat.TotalConfirmed
+            let countryDeaths = countryStat.TotalDeaths
+            let countryRecovered = countryStat.TotalRecovered
             
             HStack {
-                
                 BarChartView(data: ChartData(values: [("Confirmed",countryConfirmed), ("Deaths",countryDeaths), ("Recovered",countryRecovered)]), title: "Infection stats", legend: "\(countryName)")
-                
                 VStack(alignment: .leading) {
                     Text("Country: \(countryName)")
                         .bold()
@@ -114,6 +105,11 @@ struct ReportsView: View {
                 }
                 .padding(.leading, 10)
             }
+        }
+        .padding(.all, 5)
+        .navigationTitle("Infection reports")
+        .onAppear {
+            getCovidStats()
         }
         
         Spacer()

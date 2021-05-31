@@ -27,7 +27,7 @@ struct PreventionView_Previews: PreviewProvider {
 struct PreventionViewContent: View {
     var body: some View {
         ZStack {
-            Color(red: 44/255, green: 42/255, blue: 232/255)
+            Color(red: 241/255, green: 241/255, blue: 249/255)
             VStack(alignment: .leading) {
                 PreventionPhysicalDistance()
                     .padding(.bottom, 20)
@@ -43,7 +43,7 @@ struct PreventionViewContent: View {
                     Text("How to prevent?")
                         .bold()
                         .lineLimit(nil)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .font(.custom("Avenir-Medium", size: 25))
                         .minimumScaleFactor(0.5)
                         .padding(.bottom, 10)
@@ -52,7 +52,7 @@ struct PreventionViewContent: View {
                 
                 Text(Constants().preventionText)
                     .font(.custom("Avenir-Medium", size: 16))
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .fontWeight(.semibold)
                     .minimumScaleFactor(0.5)
                     .padding(10)
@@ -74,7 +74,7 @@ struct PreventionPhysicalDistance: View {
             Text("Physical distance")
                 .bold()
                 .lineLimit(nil)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .font(.custom("Avenir-Medium", size: 25))
                 .minimumScaleFactor(0.5)
             Spacer()
@@ -84,7 +84,7 @@ struct PreventionPhysicalDistance: View {
         VStack {
             Text(Constants().preventionPhysicalDistance)
                 .font(.custom("Avenir-Medium", size: 16))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
                 .padding(10)
@@ -103,7 +103,7 @@ struct PreventionHygiene: View {
             Text("Hygiene")
                 .bold()
                 .lineLimit(nil)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .font(.custom("Avenir-Medium", size: 25))
                 .minimumScaleFactor(0.5)
             Spacer()
@@ -113,7 +113,7 @@ struct PreventionHygiene: View {
         VStack {
             Text(Constants().preventionHygiene)
                 .font(.custom("Avenir-Medium", size: 16))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
                 .padding(10)
@@ -132,7 +132,7 @@ struct PreventionUseMask: View {
             Text("Use mask")
                 .bold()
                 .lineLimit(nil)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .font(.custom("Avenir-Medium", size: 25))
                 .minimumScaleFactor(0.5)
             Spacer()
@@ -142,7 +142,7 @@ struct PreventionUseMask: View {
         VStack {
             Text(Constants().preventionUseMask)
                 .font(.custom("Avenir-Medium", size: 16))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
                 .padding(10)
@@ -161,7 +161,7 @@ struct PreventionCleanSurface: View {
             Text("Clean surface")
                 .bold()
                 .lineLimit(nil)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .font(.custom("Avenir-Medium", size: 25))
                 .minimumScaleFactor(0.5)
                 .padding(.top, 20)
@@ -172,7 +172,7 @@ struct PreventionCleanSurface: View {
         VStack {
             Text(Constants().preventionCleanSurface)
                 .font(.custom("Avenir-Medium", size: 16))
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .fontWeight(.semibold)
                 .minimumScaleFactor(0.5)
                 .padding(10)

@@ -63,8 +63,9 @@ struct CountryCovidView: View {
             List(covidStats.Countries, id: \.self) { countryStat in
                 ZStack {
                     RoundedRectangle(cornerRadius: 15.0, style: .continuous)
-                        .fill(Color.white)
-                        .shadow(radius: 10.0)
+                        .fill(Color(red: 241/255, green: 241/255, blue: 249/255))
+//                        .fill(Color.white)
+//                        .shadow(radius: 10.0)
                     
                     VStack(alignment: .center) {
                         HStack {
