@@ -22,6 +22,8 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 struct HomeViewContent: View {
+    @State private var showHealthStatsView = false
+    
     var body: some View {
         ZStack {
             Color(red: 44/255, green: 42/255, blue: 232/255).edgesIgnoringSafeArea(.all)
@@ -68,9 +70,19 @@ struct HomeViewContent: View {
             }
         }
         .navigationTitle("Prevent Covid-19")
-        .navigationBarItems(trailing: NavigationLink(destination: HealthStats()) {
-            Image(systemName: "heart.text.square")
-        })
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button(action: {
+                    showHealthStatsView.toggle()
+                }) {
+                    Image(systemName: "heart.text.square")
+                        .imageScale(.large)
+                }
+                .sheet(isPresented: $showHealthStatsView) {
+                    HealthStats(showHealthStatsView: self.$showHealthStatsView)
+                }
+            }
+        }
         .navigationBarColor(backgroundColor: Color.customBlue, tintColor: .white)
     }
 }

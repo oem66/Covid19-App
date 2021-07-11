@@ -18,90 +18,101 @@ struct HealthStats: View {
     @State private var flightsClmb = Int()
     @State private var weightPar = Double()
     
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var showHealthStatsView: Bool
+    
     var body: some View {
-        ZStack {
-            VStack(alignment: .leading, spacing: 10) {
-                // Activity
-                // Steps, Walking + Running Distance, Flights Climbed - DONE
-                
-                HStack {
-                    Image(systemName: "figure.walk.circle")
-                        .resizable()
-                        .frame(width: 35, height: 35, alignment: .center)
-                        .foregroundColor(.green)
+        NavigationView {
+            ZStack {
+                VStack(alignment: .leading, spacing: 10) {
+                    // Activity
+                    // Steps, Walking + Running Distance, Flights Climbed - DONE
                     
-                    Text("\(steps, specifier: "%.1f") steps")
-                        .bold()
-                        .font(.custom("Avenir-Medium", size: 16))
-                        .foregroundColor(.black)
-                        .minimumScaleFactor(0.5)
-                        .padding(.leading, 10)
-                }
-                
-                HStack {
-                    Image(systemName: "figure.walk.circle")
-                        .resizable()
-                        .frame(width: 35, height: 35, alignment: .center)
-                        .foregroundColor(.yellow)
+                    HStack {
+                        Image(systemName: "figure.walk.circle")
+                            .resizable()
+                            .frame(width: 35, height: 35, alignment: .center)
+                            .foregroundColor(.green)
+                        
+                        Text("\(steps, specifier: "%.1f") steps")
+                            .bold()
+                            .font(.custom("Avenir-Medium", size: 16))
+                            .foregroundColor(.black)
+                            .minimumScaleFactor(0.5)
+                            .padding(.leading, 10)
+                    }
                     
-                    Text("\(walkingRunningDistance, specifier: "%.1f") m")
-                        .bold()
-                        .font(.custom("Avenir-Medium", size: 16))
-                        .foregroundColor(.black)
-                        .minimumScaleFactor(0.5)
-                        .padding(.leading, 10)
-                }
-                
-                HStack {
-                    Image(systemName: "figure.walk.circle")
-                        .resizable()
-                        .frame(width: 35, height: 35, alignment: .center)
-                        .foregroundColor(.yellow)
+                    HStack {
+                        Image(systemName: "figure.walk.circle")
+                            .resizable()
+                            .frame(width: 35, height: 35, alignment: .center)
+                            .foregroundColor(.yellow)
+                        
+                        Text("\(walkingRunningDistance, specifier: "%.1f") m")
+                            .bold()
+                            .font(.custom("Avenir-Medium", size: 16))
+                            .foregroundColor(.black)
+                            .minimumScaleFactor(0.5)
+                            .padding(.leading, 10)
+                    }
                     
-                    Text("\(flightsClmb)")
-                        .bold()
-                        .font(.custom("Avenir-Medium", size: 16))
-                        .foregroundColor(.black)
-                        .minimumScaleFactor(0.5)
-                        .padding(.leading, 10)
-                }
-                
-                // Body Measurements
-                // Weight, Height, Body Temperature - IN PROGRESS
-                
-                HStack {
-                    Image(systemName: "figure.walk.circle")
-                        .resizable()
-                        .frame(width: 35, height: 35, alignment: .center)
-                        .foregroundColor(.yellow)
+                    HStack {
+                        Image(systemName: "figure.walk.circle")
+                            .resizable()
+                            .frame(width: 35, height: 35, alignment: .center)
+                            .foregroundColor(.yellow)
+                        
+                        Text("\(flightsClmb)")
+                            .bold()
+                            .font(.custom("Avenir-Medium", size: 16))
+                            .foregroundColor(.black)
+                            .minimumScaleFactor(0.5)
+                            .padding(.leading, 10)
+                    }
                     
-                    Text("\(weightPar, specifier: "%.1f") kg")
-                        .bold()
-                        .font(.custom("Avenir-Medium", size: 16))
-                        .foregroundColor(.black)
-                        .minimumScaleFactor(0.5)
-                        .padding(.leading, 10)
+                    // Body Measurements
+                    // Weight, Height, Body Temperature - IN PROGRESS
+                    
+                    HStack {
+                        Image(systemName: "figure.walk.circle")
+                            .resizable()
+                            .frame(width: 35, height: 35, alignment: .center)
+                            .foregroundColor(.yellow)
+                        
+                        Text("\(weightPar, specifier: "%.1f") kg")
+                            .bold()
+                            .font(.custom("Avenir-Medium", size: 16))
+                            .foregroundColor(.black)
+                            .minimumScaleFactor(0.5)
+                            .padding(.leading, 10)
+                    }
+                    
+                    // Heart
+                    // Heart Rate, Blood Pressure
+                    
+                    // Respiratory
+                    // Blood Oxygen
+                    
+                    // Symptoms
+                    // Appetite Change, Chest Tightness and Pain, Chills, Congestion, Coughing, Diarrhoea, Dizziness, Fainting, Fatigue, Fever, Headache, Loss of Smell, Loss of Taste, Shortness of Breath, Sore Throat, Vomiting
                 }
-                
-                // Heart
-                // Heart Rate, Blood Pressure
-                
-                // Respiratory
-                // Blood Oxygen
-                
-                // Symptoms
-                // Appetite Change, Chest Tightness and Pain, Chills, Congestion, Coughing, Diarrhoea, Dizziness, Fainting, Fatigue, Fever, Headache, Loss of Smell, Loss of Taste, Shortness of Breath, Sore Throat, Vomiting
+            }
+            .navigationBarTitle(Text("Health Stats"), displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                self.showHealthStatsView = false
+            }) {
+                Text("Done").bold()
+            })
+            .navigationTitle("Health Stats")
+            .onAppear {
+                HealthStoreAvailability()
+                fetchActivityData()
+                fetchBodyMeasurements()
+            }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Health Store Issue"), message: Text("Can't read data from Health Store!"), dismissButton: .default(Text("OK")))
             }
         }
-        .onAppear {
-            HealthStoreAvailability()
-            fetchActivityData()
-            fetchBodyMeasurements()
-        }
-        .alert(isPresented: $showingAlert) {
-            Alert(title: Text("Health Store Issue"), message: Text("Can't read data from Health Store!"), dismissButton: .default(Text("OK")))
-        }
-        .navigationTitle("Health Stats")
     }
     
     private func HealthStoreAvailability() {
@@ -237,7 +248,7 @@ struct HealthStats: View {
         healthStore.execute(querySteps)
         healthStore.execute(queryWalkingRunning)
         healthStore.execute(queryFlightsClimbed)
-     }
+    }
     
     private func getMostRecentSample(for sampleType: HKSampleType, completion: @escaping (HKQuantitySample?, Error?) -> ()) {
         //1. Use HKQuery to load the most recent samples.
@@ -341,10 +352,4 @@ struct HealthCard: View {
         
     }
     
-}
-
-struct HealthStats_Previews: PreviewProvider {
-    static var previews: some View {
-        HealthStats()
-    }
 }
